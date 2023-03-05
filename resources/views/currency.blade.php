@@ -20,7 +20,14 @@
  
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                    <a href="currency" class="btn btn-primary">Kursy</a>
+                @foreach($exchangeRates as $rate)
+                    
+                    @php
+                        print_r($rate);
+                        echo ' \r\n '; 
+                    @endphp
+                    
+                @endforeach  
             </div>
         </div>
     </body>
