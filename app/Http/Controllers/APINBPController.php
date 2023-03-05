@@ -31,11 +31,11 @@ class APINBPController extends Controller
             $currency->currency_code = $rate['code'];
             $currency->name = $rate['currency'];
             $currency->exchange_rate = $rate['mid'];
-         // $currency->date = $data[0]['effectiveDate'];
+        
             $currency->save();
         }
          
-        // zwróć wynik do widoku lub przetwórz dane dalej
+       
         return view('currency', ['exchangeRates' => $exchangeRates]);
     }
 }
